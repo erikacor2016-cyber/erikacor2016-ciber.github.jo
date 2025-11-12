@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sueño - Eventos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f3e5f5, #e3eff0);
+        }
+
+        .logo {
+            width: 150px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+
+        .titulo {
+            text-align: izquieda;
+            color: #252325fd;
+            font-weight: 1200;
+        }
+
+        .sub {
+            text-align: izquierda;
+            color: #139b89a9;
+            font-size: 1.2rem;
+        }
+
+        .for {
+            width: 70%;
+            margin: 40px auto;
+        }
+
+        .thank-you {
+            text-align: izquierda;
+            color: #2dce75ce;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            display: none;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #nosotros {
+            background-color: lab(82.69% -26.18 12.77);
+            padding: 40px 0;
+            border-radius: 10px;
+        }
+
+        #nosotros p {
+            width: 80%;
+            margin: 0 auto;
+            color: #1a1b1b;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        #duenos {
+            background-color: #f0e9ff;
+            padding: 40px 0;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 85%;
+        }
+
+        #duenos h2 {
+            text-align: center;
+            color: #1c1b1d;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .duenos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .dueno {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 230px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .dueno:hover {
+            transform: scale(1.05);
+        }
+
+        .dueno img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .dueno h4 {
+            color: #2d2442fd;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .dueno p {
+            color: #8a2c2c;
+            font-size: 0.9rem;
+        }
+        /* 🌸 Carrusel automático con movimiento arriba y abajo */
+        .slider {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+
+        .carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  animation: flotarElegante 6s ease-in-out infinite;
+}
+
+@keyframes flotarElegante {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+        .slider img:nth-child(1) {
+            animation-delay: 0s, 0s;
+        }
+
+        .slider img:nth-child(2) {
+            animation-delay: 4s, 0s;
+        }
+
+        .slider img:nth-child(3) {
+            animation-delay: 8s, 0s;
+        }
+
+        @keyframes cambio {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <img class="logo" src="imagen logo.png" alt="logo">
+    <h1 class="titulo">Mi SUEÑO</h1>
+    <h3 class="sub">✨Quinceaños, Matrimonios y Aniversarios✨</h3>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="boda.jpeg" class="d-block w-100" alt="..."></div>
+            <div class="carousel-item"><img src="Quinceaños1.jpeg" class="d-block w-100" alt="..."></div>
+            <div class="carousel-item"><img src="eventos.jpeg" class="d-block w-100" alt="..."></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <h5 class="text-center mt-4">
+        Tus 15 años, tu boda, tu momento especial. Vive cada detalle, crea recuerdos inolvidables, déjanos ser parte de tu historia, queremos dejar nuestra huella en tus recuerdos
+    </h5>
+
+    <!-- 🔹 SECCIÓN DE IMÁGENES (NUEVA, ENCIMA DE QUIÉNES SOMOS) -->
+    <section class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card">
+            <img src="quinceaños2.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">15 Años</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="BODAS.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bodas</h5>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- 🔹 FIN DE SECCIÓN -->
+
+    <!-- Sección Quiénes Somos -->
+    <section id="nosotros" class="about text-center mt-5">
+        <h2 class="titulo">¿Quiénes Somos?</h2>
+        <p>
+            Crear eventos únicos para nuestros clientes, especializándonos en la organización de aniversarios de bodas y fiestas de 15 años,
+            enfocándonos en ser empáticos y comprender las preferencias y pensamientos del cliente,
+            ofreciendo soluciones innovadoras y un servicio de calidad para lograr una experiencia significativa e inolvidable para cada asistente.
+        </p>
+    </section>
+
+    <!-- NUEVA SECCIÓN DUEÑOS -->
+    <section id="duenos">
+        <h2>Dueños de la Empresa</h2>
+        <div class="duenos-container">
+            <div class="dueno">
+                <img src="imagenes/angie.jpg" alt="">
+                <h4>Angie Viviana Ardila Rodríguez</h4>
+                <p>Fundadora Recursos Humanos</p>
+            </div>
+            <div class="dueno">
+                <img src="imagenes/julian.jpg" alt="">
+                <h4>Julián Santiago Castellanos Cifuentes</h4>
+                <p>Fundador Coordinador de Logística y Producción</p>
+            </div>
+            <div class="dueno">
+                <img src="imagenes/wendy.jpg" alt="">
+                <h4>Wendy Katherine Tolva Pereira</h4>
+                <p>Fundadora Diseñadora de Eventos y Protocolo</p>
+            </div>
+            <div class="dueno">
+                <img src="imagenes/cristian.jpg" alt="">
+                <h4>Cristian David Rueda Martínez</h4>
+                <p>Fundador Director de Sonido e Iluminación</p>
+            </div>
+            <div class="dueno">
+                <img src="imagenes/laura.jpg" alt="">
+                <h4>Laura Valentina Cardona Mateus</h4>
+                <p>Fundadora Asesora de Clientes y Planeación</p>
+            </div>
+            <div class="dueno">
+                <img src="imagenes/erika.jpg" alt="">
+                <h4>Erika Constanza Olarte Rodríguez</h4>
+                <p>Fundadora y Directora General</p>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="titulo mt-5">Contáctanos</h1>
+
+    <form class="for" id="contact-form" action="https://formspree.io/f/xyzlgzqg" method="POST">
+        <div class="form-group mb-3">
+            <label>Nombres</label>
+            <input type="text" name="nombre" class="form-control" required>
+        </div>
+            <div class="form-group mb-3">
+            <label>Apellidos</label>
+            <input type="text" name="apellidos" class="form-control" required>
+        </div>
+        <div class="form-group mb-3">
+            <label>celular</label>
+            <input type="text" name="celular" class="form-control" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Correo</label>
+            <input type="email" name="correo" class="form-control" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Evento</label>
+            <select name="evento" class="form-control">
+                <option>15 Años</option>
+                <option>Boda</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Fecha en que desea realizar el Evento</label>
+            <input type="date" name="fecha" class="form-control" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Características del Evento</label>
+            <textarea name="caracteristicas" class="form-control" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar Formulario</button>
+    </form>
+
+    <div class="thank-you" id="thank-you-message">
+        ¡Gracias por contactarnos! 💖<br>Pronto nos comunicaremos contigo 💫
+    </div>
+
+    <footer class="text-center py-3 bg-light">
+        <p>© 2025 Mi Sueño. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" class="text-secondary mx-2">Síguenos en Facebook: Mis Sueños</a>
+            <a href="#" class="text-secondary mx-2">Síguenos en Instagram: Mis Sueños</a>
+            <a href="#" class="text-secondary mx-2">3052004238 - 3015919667</a>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const thankYou = document.getElementById('thank-you-message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.reset();
+                thankYou.style.display = 'block';
+                window.scrollTo({ top: thankYou.offsetTop, behavior: 'smooth' });
+            } else {
+                alert('Hubo un problema al enviar el formulario. Inténtalo de nuevo.');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+
